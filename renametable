@@ -1,0 +1,7 @@
+Rename Table Syntax:
+
+     Given a table named 'hobbies', to rename the table, issue the following command:
+
+ALTER TABLE hobbies RENAME TO ########;
+
+     Where the name of the table is substituted for ########.

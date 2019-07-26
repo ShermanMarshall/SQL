@@ -1,0 +1,8 @@
+Update Column Syntax
+
+      To update a column in a table, use the following syntax:
+
+UPDATE #tablename# SET 
+       #column1#=#desiredvalue#,
+       #column2#=#desiredvalue2#
+       WHERE #fieldofcolumntochange#=#referencevalue#;

@@ -1,0 +1,33 @@
+Given two tables constructed in the following manner:
+   CREATE TABLE people (name varchar(25), hobby int unsigned);
+   CREATE TABLE hobbies (type varcahr(25), id int unsigned primary key auto_increment);
+
+With the following values:
+   People               Hobbies
++-----------+-------+-------------+----+
+| name      | hobby | type        | id |
++-----------+-------+-------------+----+
+| sherman   |     1 | video games |  1 |
+| david     |     2 | music       |  2 |
+| marshall  |     3 | golf        |  3 |
+| valerie   |     4 | reading     |  4 |
+| elizabeth |     5 | music       |  5 |
++-----------+-------+-------------+----+
+
+An inner join may be used to aggregate data based on common values. For instance, the statement:
+
+mysql> SELECT people.name, hobbies.type 
+    -> FROM hobbies
+    -> INNER JOIN people on people.hobby = hobbies.id;
+
+Will produce the following output:
+
++-----------+-------------+
+| name      | type        |
++-----------+-------------+
+| sherman   | video games |
+| david     | music       |
+| marshall  | golf        |
+| valerie   | reading     |
+| elizabeth | music       |
++-----------+-------------+
